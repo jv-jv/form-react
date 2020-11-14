@@ -1,0 +1,22 @@
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin entry-btn($color) {
+  color: $color;
+  border: 1px solid $color;
+
+  &:hover {
+    background-color: $color;
+    color: white;
+    border: 1px solid transparent;
+  }
+}

@@ -1,0 +1,21 @@
+.settings {
+  display: grid;
+  grid-template-columns: 80px minmax(100px, 300px);
+  margin: 0.5em 0;
+  align-items: center;
+
+  &__title {
+    margin: 1em 0;
+  }
+
+  &__btn {
+    justify-self: start;
+  }
+
+  &__input {
+    border: 1px solid #ddd;
+    border-radius: $radius-s;
+    padding: 0.5em;
+    width: 12em;
+  }
+}

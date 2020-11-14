@@ -1,0 +1,61 @@
+.entry {
+  display: grid;
+  position: relative;
+  // grid-template-columns: 1fr;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "name name company status"
+      "manager . . date"
+      "comments comments comments comments"
+      "notes notes notes notes"
+      "btn btn btn btn";
+    align-items: center;
+
+    &__name {
+      grid-area: name;
+    }
+
+    &__company {
+      grid-area: company;
+      justify-self: center;
+    }
+
+    &__status {
+      grid-area: status;
+      justify-self: end;
+    }
+
+    &__manager {
+      grid-area: manager;
+    }
+
+    &__date {
+      grid-area: date;
+      justify-self: end;
+    }
+
+    &__comments {
+      grid-area: comments;
+    }
+
+    &__notes {
+      grid-area: notes;
+    }
+  } //end media query
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      margin: 0.3em 0;
+    }
+
+    @media (min-width: 700px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

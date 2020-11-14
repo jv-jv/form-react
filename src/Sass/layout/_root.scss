@@ -1,0 +1,10 @@
+#root {
+  display: grid;
+  min-height: 100vh;
+  margin: 0 2em;
+
+  @media (min-width: 700px) {
+    justify-content: center;
+    align-content: flex-start;
+  }
+}

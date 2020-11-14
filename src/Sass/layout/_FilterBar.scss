@@ -1,0 +1,16 @@
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+  align-items: center;
+
+  & > * {
+    width: 100%;
+    margin: 0.3em;
+  }
+
+  @media (min-width: 700px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,90 @@
+.entry {
+  border: 1px solid $c-v-light;
+
+  border-radius: $radius-l;
+  padding: 1em;
+  margin: 0.5em 0;
+
+  &:last-of-type {
+    margin-bottom: 2em;
+  }
+
+  &__name,
+  &__company,
+  &__date,
+  &__manager,
+  &__manager__title,
+  &__comments,
+  &__comments__title,
+  &__notes,
+  &__notes__title {
+    padding: 0.5em 0;
+  }
+
+  &--selected {
+    box-shadow: 0 0 0 1px $c-selected;
+  }
+
+  &__status {
+    padding: 0.5em 1.5em;
+    border-radius: $radius-s;
+    justify-self: flex-start;
+
+    &--urgent {
+      border: 1px solid $c-urgent;
+      color: $c-urgent;
+    }
+    &--hold {
+      border: 1px solid $c-hold;
+      color: $c-hold;
+    }
+    &--completed {
+      border: 1px solid $c-completed;
+      color: $c-completed;
+    }
+
+    &--ascending {
+      border: 1px solid $c-regular;
+      color: $c-regular;
+    }
+    &--off {
+      border: 1px solid $c-off;
+      color: $c-off;
+    }
+
+    @media (min-width: 700px) {
+      justify-self: stretch;
+    }
+  }
+
+  &__comments {
+    margin: 0;
+  }
+
+  &__notes {
+    position: relative;
+
+    &__text {
+      border: 1px solid $c-v-light;
+      border-radius: $radius-s;
+      resize: vertical;
+      width: 100%;
+      padding: 0.5em;
+
+      &:disabled {
+        background-color: $c-disabled;
+      }
+    }
+
+    &__save {
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
+  }
+
+  &__btns {
+    padding: 0 1em;
+    margin: 0.3em 0 1em 0;
+  }
+}
